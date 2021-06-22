@@ -98,14 +98,29 @@ export const Todos = () => {
     const updatedTodos = todos.map((todo) => {
       if(todo.id === id) {
         return {
+          //Used spread operator to copy properties
+          //of todo
           ...todo,
           isComplete: !todo.isComplete
         }
       }
       return todo
-    })
+    });
+
+    const updatedSearchedTodos = searchTodos.map((todo) => {
+      if(todo.id === id) {
+        return {
+          //Used spread operator to copy properties
+          //of todo
+          ...todo,
+          isComplete: !todo.isComplete
+        }
+      }
+      return todo
+    });
+
     setTodos(updatedTodos);
-    setSearchTodos(updatedTodos);
+    setSearchTodos(updatedSearchedTodos);
   }
 
   // Store original search filter list

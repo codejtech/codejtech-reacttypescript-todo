@@ -4,7 +4,7 @@ import {
   Checkbox,
   ListItem
 } from '@material-ui/core';
-
+//Define Todo data type
 type Todo = {
   id: string
   task: string
@@ -16,7 +16,9 @@ type TodoProps = {
   handleRemoveTodo: (id: string) => void,
   handleCheckTodos: (id: string) => void
 }
-
+//export named arrow function and pass
+//todo, handleRemoveTodo, and handleCheckTodos in function scope
+//and define data type as TodoProps
 export const Row = ({
   todo: { task, isComplete, id },
   handleRemoveTodo,
